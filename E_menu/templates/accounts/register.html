@@ -4,14 +4,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration</title>
   </head>
   <body>
     <div class="wrapper">
       <div class="title-text">
-        <div class="title login py-5">Login Form</div>
+        <!-- <div class="title login py-5">Login Form</div> -->
         <div class="title signup py-5">Signup Form</div>
       </div>
 
@@ -31,15 +31,15 @@
 
 
       <div class="form-container">
-        <div class="slide-controls">
+        <!-- <div class="slide-controls">
           <input type="radio" name="slide" id="login" checked />
           <input type="radio" name="slide" id="signup" />
           <label for="login" class="slide login">Login</label>
           <label for="signup" class="slide signup">Signup</label>
           <div class="slider-tab"></div>
-        </div>
+        </div> -->
         <div class="form-inner">
-          <form action="#" class="login">
+          <!-- <form action="#" class="login">
             {% csrf_token %}
             <div class="field">
               <input type="text" placeholder="Email Address" required />
@@ -55,7 +55,7 @@
             <div class="signup-link">
               Not a member? <a href="">Signup now</a>
             </div>
-          </form>
+          </form> -->
           <form action="register" class="signup" method="post">
             {% csrf_token %}
             <div class="field">

@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
   </head>
@@ -39,7 +39,7 @@
           <div class="slider-tab"></div>
         </div> -->
         <div class="form-inner">
-          <form action="login" class="login">
+          <form action="login" class="login" method="post">
             {% csrf_token %}
             <div class="field">
               <input type="text" placeholder="Email Address" name="email_ID" required />

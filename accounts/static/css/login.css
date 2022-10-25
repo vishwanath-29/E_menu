@@ -13,7 +13,7 @@ body {
     height: 100%;
     width: 100%;
     place-items: center;
-    background-image: url("../imgs/food_p.jpg")  ;
+    background-image: url("../../imgs/accounts/food_p.jpg")  ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
