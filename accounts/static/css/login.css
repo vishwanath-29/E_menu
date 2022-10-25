@@ -175,7 +175,10 @@ form .field input:focus::placeholder {
 .form-inner form .signup-link a {
     color: #1a75ff;
     text-decoration: none;
+    /* color: #000; */
 }
+
+
 
 .form-inner form .pass-link a:hover,
 .form-inner form .signup-link a:hover {
@@ -218,4 +221,8 @@ form .btn input[type="submit"] {
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
+}
+
+.forgot-passwd{
+    color: black;
 }
