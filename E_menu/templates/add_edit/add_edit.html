@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Babysitter Application Form</title>
+    <title>Food Addition </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <style>
@@ -174,7 +174,7 @@
   </head>
   <body>
     <div class="testbox">
-      <form  action="add_edit" method="post">
+      <form  action="/add_edit/" method="post">
         {% csrf_token %}
         <div class="banner">
           <h1>Food Edit</h1>
@@ -186,8 +186,8 @@
           </div>
         </div>
         <div class="item">
-            <p>Short Description</p>
-            <textarea rows="1"></textarea>
+          <p>Short Description</p>
+          <input type="text" name="ShortDescription" placeholder="Short Description" />
           </div>
         <div class="question">
           <p>Is Vegetarian?</p>
@@ -219,11 +219,11 @@
         
         <div class="item">
           <p>Price</p>
-          <input  type="number" step="0.01" name="name"/>
+          <input  type="number" step="0.01" name="price"/>
         </div>
         <div class="item">
           <p>Category </p>
-            <select>
+            <select name="category">
               <option value="1">Starters</option>
               <option value="2">Soups</option>
               <option value="3">Salads</option>

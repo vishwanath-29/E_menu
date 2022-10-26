@@ -12,7 +12,7 @@ def login(request):
         user=auth.authenticate(request,username=user,password=passwd)
         if(user is not None):
             auth.login(request,user)
-            return render(request,"add_edit/add_edit.html")
+            return redirect("/add_edit/")
         else:
             messages.error(request,"invalid Credentials")
             return redirect('login')
