@@ -7,12 +7,12 @@ from django.views.decorators.csrf import csrf_exempt
 
 def login(request):
     if(request.method=='POST'):
-        email_ID=request.POST['email_ID']
+        user=request.POST['username']
         passwd=request.POST['password']
-        user=auth.authenticate(request,username=email_ID,password=passwd)
+        user=auth.authenticate(request,username=user,password=passwd)
         if(user is not None):
             auth.login(request,user)
-            return redirect('/')
+            return render(request,"add_edit/add_edit.html")
         else:
             messages.error(request,"invalid Credentials")
             return redirect('login')
