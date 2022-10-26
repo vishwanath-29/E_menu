@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'E_menu.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'E_menu',
-        'USER':'postgres',
-        'PASSWORD':'001',
+        'NAME': 'restaurant_management',
+        'USER':'vishwa',
+        'PASSWORD':'1234',
         'HOST':'localhost'
     }
 }

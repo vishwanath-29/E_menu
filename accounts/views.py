@@ -3,6 +3,7 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
+from accounts.models import restaurant
 
 
 def login(request):
@@ -27,7 +28,7 @@ def register(request):
         email=request.POST['email_ID']
         passwd=request.POST['password1']
         confirm_passwd=request.POST['password2']
-        
+        restaurant_name=request.POST['restaurant_name']
         if passwd==confirm_passwd:
             if User.objects.filter(username=name).exists():
                 
@@ -40,6 +41,8 @@ def register(request):
             else:
                 user=User.objects.create_user(username=name,email=email,password=passwd)
                 user.save()
+                restaurant_obj=restaurant(Restaurant_Id=user,Restaurant_name=restaurant_name)
+                restaurant_obj.save()
                 print("User saved")
                 return redirect('/')
                 
