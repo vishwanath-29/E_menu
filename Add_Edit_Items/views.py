@@ -36,14 +36,7 @@ def edit(request):
     if 'Get' in request.POST:
         get_food_name=request.POST['FoodName']
         food_data = Food.objects.filter(Food_Name=get_food_name).values()
-        print(food_data.values('Price').first().get('Price'))
-        # context = {
-        # "FoodName": "Anjaneyulu",
-        # "ShortDescription": "Batta",
-        # "isvegetarian": "Hyderabad, India",
-        # "isbestseller": "Hyderabad, India",
-        # "isavailable": "Hyderabad, India",
-        # "category" : "Hyderabad, India",
-        
-        # }
+
+        context=food_data.values().first()
+        print(context)
     return render(request,"add_edit/edit.html")
