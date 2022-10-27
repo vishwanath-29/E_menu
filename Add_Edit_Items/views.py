@@ -9,7 +9,7 @@ from Add_Edit_Items.models import Food
 
 
 # Create your views here.
-def add_edit_page(request):
+def add(request):
     user = request.user
     print(user)
     if(request.method=="POST"):
@@ -29,10 +29,8 @@ def add_edit_page(request):
         Category=get_category(food_category),
         )
         food.save()
-    return render(request,"add_edit/add_edit.html")
+    return render(request,"add_edit/add.html")
 
-def hello(request):
-    return render(request,"add_edit.html")
 def get_category(category):
     if category=="1":
         return "Starters"
@@ -48,3 +46,9 @@ def get_category(category):
         return "Beverages"
     elif category=="7":
         return "Desserts"
+
+
+def edit(request):
+    if 'Get' in request.POST:
+        print("get clicked")
+    return render(request,"add_edit/edit.html")

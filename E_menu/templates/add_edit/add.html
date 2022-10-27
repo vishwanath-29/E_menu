@@ -11,7 +11,7 @@
   <body>
     <div class="form-container">
       <div class="testbox">
-        <form  action="add_edit" method="post">
+        <form  action="/add/" method="post">
           {% csrf_token %}
           <div class="banner">
             <h1>Food Edit</h1>
@@ -64,7 +64,7 @@
           </div>
           <div class="item">
             <p>Category </p>
-              <select class="category">
+              <select class="category" name="category">
                 <option value="1">Starters</option>
                 <option value="2">Soups</option>
                 <option value="3">Salads</option>
@@ -75,14 +75,12 @@
               </select>
             </div>
           </div>
-              
-        </form>
-        
       </div>
       <div class="btn-block">
         <button type="submit" style="margin-right: 20px;">Add</button>
         
       </div>
     </div>
+  </form>
       </body>
 </html>

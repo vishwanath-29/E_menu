@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Food Adding</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/add_edit.css' %}">
+  </head>
+
+  <body>
+    <div class="form-container">
+      <div class="testbox">
+        <form  action="edit" method="post">
+          {% csrf_token %}
+          <div class="banner">
+            <h1>Food Edit</h1>
+          </div>
+          <div class="item">
+            <p>Name</p>
+            <div class="name-item input-area">
+              <input type="text" name="FoodName" placeholder="Name of Food" />
+            </div>
+          </div>
+          <div class="item">
+              <p>Short Description</p>
+              <div class="input-area">
+                <input type="text" name="ShortDescription" placeholder="Short Description">
+              </div>
+              
+              
+            </div>
+          <div class="question">
+            <p>Is Vegetarian?</p>
+            <div class="question-answer">
+              <input type="radio" value="1" id="radio_1" name="isvegetarian"/>
+              <label for="radio_1" class="radio"><span>Yes</span></label>
+              <input type="radio" value="0" id="radio_2" name="isvegetarian" />
+              <label for="radio_2" class="radio"><span>No</span></label>
+            </div>
+          </div>
+          <div class="question">
+            <p>Is Best-Seller?</p>
+            <div class="question-answer">
+              <input type="radio" value="1" id="radio_3" name="isbestseller"/>
+              <label for="radio_3" class="radio"><span>Yes</span></label>
+              <input type="radio" value="0" id="radio_4" name="isbestseller" />
+              <label for="radio_4" class="radio"><span>No</span></label>
+            </div>
+          </div>
+          <div class="question"> 
+            <p>Is Available?</p>
+            <div class="question-answer">
+              <input type="radio" value="1" id="Yes" name="isavailable"/>
+              <label for="Yes" class="radio"><span>Yes</span></label>
+              <input type="radio" value="0" id="No" name="isavailable" />
+              <label for="No" class="radio"><span>No</span></label>
+            </div>
+          </div>
+          
+          <div class="item">
+            <p>Price</p>
+            <input  type="number" step="1.0" name="price" placeholder="Price of the Food"/>
+          </div>
+          <div class="item">
+            <p>Category </p>
+              <select class="category">
+                <option value="1">Starters</option>
+                <option value="2">Soups</option>
+                <option value="3">Salads</option>
+                <option value="4" selected>Main Course</option>
+                <option value="5">Sides</option>
+                <option value="6">Beverages</option>
+                <option value="7">Desserts</option>
+              </select>
+            </div>
+          </div>
+              
+      
+        
+      </div>
+      <div class="btn-block">
+        <button type="submit" style="margin-right: 20px;" name="Get">Get</button>
+        <button type="submit" style="margin-right: 20px;" name="Save">Save</button>
+      </div>
+    </div>
+  </form>
+      </body>
+</html>
