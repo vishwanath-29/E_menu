@@ -13,7 +13,7 @@ def login(request):
         user=auth.authenticate(request,username=user,password=passwd)
         if(user is not None):
             auth.login(request,user)
-            return redirect("/add/")
+            return redirect("/restaurant")
         else:
             messages.error(request,"invalid Credentials")
             return redirect('login')
@@ -44,7 +44,7 @@ def register(request):
                 restaurant_obj=restaurant(Restaurant_Id=user,Restaurant_name=restaurant_name)
                 restaurant_obj.save()
                 print("User saved")
-                return redirect('/')
+                return redirect('/restaurant')
                 
         else:
             messages.error(request,'Password Not Matching...')
