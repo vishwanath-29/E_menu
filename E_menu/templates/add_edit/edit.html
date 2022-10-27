@@ -11,7 +11,7 @@
   <body>
     <div class="form-container">
       <div class="testbox">
-        <form  action="edit" method="post">
+        <form  action="/edit/" method="post">
           {% csrf_token %}
           <div class="banner">
             <h1>Food Edit</h1>
@@ -27,8 +27,6 @@
               <div class="input-area">
                 <input type="text" name="ShortDescription" placeholder="Short Description">
               </div>
-              
-              
             </div>
           <div class="question">
             <p>Is Vegetarian?</p>
@@ -64,15 +62,15 @@
           </div>
           <div class="item">
             <p>Category </p>
-              <select class="category">
-                <option value="1">Starters</option>
-                <option value="2">Soups</option>
-                <option value="3">Salads</option>
-                <option value="4" selected>Main Course</option>
-                <option value="5">Sides</option>
-                <option value="6">Beverages</option>
-                <option value="7">Desserts</option>
-              </select>
+            <select class="category" name="category">
+              <option value="Starters">Starters</option>
+              <option value="Soups">Soups</option>
+              <option value="Salads">Salads</option>
+              <option value="Main Course" selected>Main Course</option>
+              <option value="Sides">Sides</option>
+              <option value="Beverages">Beverages</option>
+              <option value="Desserts">Desserts</option>
+            </select>
             </div>
           </div>
               

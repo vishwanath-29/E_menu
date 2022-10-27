@@ -20,35 +20,30 @@ def add(request):
         food_isvegetarian=request.POST['isavailable']
         food_price=request.POST['price']
         food_category=request.POST['category']
-      
+       
         food=Food(Restaurant_ID=user,Food_Name=food_name,Short_Description=food_description,
         is_veg=food_isvegetarian,
         is_bestseller=food_isbestseller,
         is_available=food_isavailable,
         Price=food_price,
-        Category=get_category(food_category),
+        Category=food_category,
         )
         food.save()
     return render(request,"add_edit/add.html")
 
-def get_category(category):
-    if category=="1":
-        return "Starters"
-    elif category=="2":
-        return "Soups"
-    elif category=="3":
-        return "Salads"
-    elif category=="4":
-        return "Main Course"
-    elif category=="5":
-        return "Sides"
-    elif category=="6":
-        return "Beverages"
-    elif category=="7":
-        return "Desserts"
-
 
 def edit(request):
     if 'Get' in request.POST:
-        print("get clicked")
+        get_food_name=request.POST['FoodName']
+        food_data = Food.objects.filter(Food_Name=get_food_name).values()
+        print(food_data.values('Price').first().get('Price'))
+        # context = {
+        # "FoodName": "Anjaneyulu",
+        # "ShortDescription": "Batta",
+        # "isvegetarian": "Hyderabad, India",
+        # "isbestseller": "Hyderabad, India",
+        # "isavailable": "Hyderabad, India",
+        # "category" : "Hyderabad, India",
+        
+        # }
     return render(request,"add_edit/edit.html")
