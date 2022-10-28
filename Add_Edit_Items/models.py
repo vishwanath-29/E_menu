@@ -10,4 +10,5 @@ class Food(models.Model):
     is_available=models.BooleanField()
     Price=models.FloatField()
     Category=models.CharField(max_length=50)
+    # image=models.URLField()
     
