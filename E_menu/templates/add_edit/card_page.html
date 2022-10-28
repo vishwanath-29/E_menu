@@ -10,7 +10,7 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Work+Sans:wght@300&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
 
 </head>
 
@@ -20,7 +20,7 @@
             <div class="container-fluid">
                 <i style="font-size: 24px; "class="fa">#90EE90;</i>
                 <a class="navbar-brand mx-auto" href="#">
-                    <img src="./imgs/14852523_5528439.jpg" width="60" height="60" alt=" " />
+                    <img src="{% static 'imgs/14852523_5528439.jpg' %}" width="60" height="60" alt=" " />
                 </a>
             </div>
             <div class="navbar-nav justify-content-center">
@@ -45,7 +45,7 @@
             <div class="card-columns  ">
                 <div class="row">
                     <div class="card card-gap col-4">
-                        <img class="card-img-top" src="./imgs/food.jpg" alt="Card image cap" id="myimg" >
+                        <img class="card-img-top" src="{% static 'imgs/food.jpg' %}" alt="Card image cap" id="myimg" >
                         <span class="badge " id="bg1">Bestseller</span>
                         <div class="card-body">
                             <h5 class="card-title" id="hea1">Pizza</h5><span class="badge bg-secondary" id="bd1">$15</span>
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="card card-gap col-4">
-                        <img class="card-img-top" src="./imgs/food.jpg" id="myimg1"  alt="Card image cap">
+                        <img class="card-img-top" src="{% static 'imgs/food.jpg' %}" id="myimg1"  alt="Card image cap">
                         <span class="badge " class="badge1" id="bg2">Bestseller</span>
                         <div class="card-body">
                             <h5 class="card-title" id="hea2">Burger</h5><span class="badge bg-secondary" id="bd2">$15</span>
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                     <div class="card card-gap col-4">
-                        <img class="card-img-top" id="myimg2" src="./imgs/food.jpg"  alt="Card image cap">
+                        <img class="card-img-top" id="myimg2" src="{% static 'imgs/food.jpg' %}"  alt="Card image cap">
                         <span class="badge " class="badge1" id="bg3">Bestseller</span>
                         <div class="card-body">
                             <h5 class="card-title" id="hea3">Dessert</h5> <span class="badge bg-secondary" id="bd3">$15</span>
@@ -91,7 +91,7 @@
         
             <div class="row">
                 <div class="card card-gap col-4">
-                    <img class="card-img-top" id="myimg3" src="./imgs/food.jpg" alt="Card image cap">
+                    <img class="card-img-top" id="myimg3" src="{% static 'imgs/food.jpg' %}" alt="Card image cap">
                     <span class="badge " class="badge1" id="bg4">Bestseller</span>
                     <div class="card-body">
                         <h5 class="card-title" id="hea4">Chinese</h5><span class="badge bg-secondary" id="bd4">$15</span>
@@ -105,7 +105,7 @@
                     </div>
                 </div>
                 <div class="card card-gap col-4">
-                    <img class="card-img-top" id="myimg4" src="./imgs/food.jpg"alt="Card image cap">
+                    <img class="card-img-top" id="myimg4" src="{% static 'imgs/food.jpg' %}"alt="Card image cap">
                     <span class="badge " class="badge1" id="bg5">Bestseller</span>
                     <div class="card-body">
                         <h5 class="card-title" id="hea5">Italian</h5><span class="badge bg-secondary" id="bd5">$15</span>
@@ -119,7 +119,7 @@
                     </div>
                 </div>
                 <div class="card card-gap col-4">
-                    <img class="card-img-top" id="myimg5" src="./imgs/food.jpg"  alt="Card image cap">
+                    <img class="card-img-top" id="myimg5" src="{% static 'imgs/food.jpg' %}"  alt="Card image cap">
                     <span class="badge " class="badge1" id="bg6">Bestseller</span>
                     <div class="card-body">
                         <h5 class="card-title" id="hea6">Indian</h5><span class="badge bg-secondary" id="bd6">$15</span>
@@ -138,6 +138,6 @@
         </div>
         </section>
 
-    <script src="./js/script.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
