@@ -39,4 +39,5 @@ def edit(request):
 
         context=food_data.values().first()
         print(context)
-    return render(request,"add_edit/edit.html",context)
+        return render(request,"add_edit/edit.html",context)
+    return render(request,"add_edit/edit.html")

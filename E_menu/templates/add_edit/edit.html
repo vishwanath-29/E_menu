@@ -28,34 +28,70 @@
                 <input type="text" name="ShortDescription" placeholder="{{ Short_Description }}">
               </div>
             </div>
+            {% if is_veg %}
           <div class="question">
             <p>Is Vegetarian?</p>
             <div class="question-answer">
-              <input type="radio" value="1" id="radio_1" name="isvegetarian"/>
+              <input type="radio" value="1" id="radio_1" name="isvegetarian" checked/>
               <label for="radio_1" class="radio"><span>Yes</span></label>
               <input type="radio" value="0" id="radio_2" name="isvegetarian" />
               <label for="radio_2" class="radio"><span>No</span></label>
             </div>
           </div>
+          {% else %}
+          <div class="question">
+            <p>Is Vegetarian?</p>
+            <div class="question-answer">
+              <input type="radio" value="1" id="radio_1" name="isvegetarian" />
+              <label for="radio_1" class="radio"><span>Yes</span></label>
+              <input type="radio" value="0" id="radio_2" name="isvegetarian" checked/>
+              <label for="radio_2" class="radio"><span>No</span></label>
+            </div>
+          </div>
+          {% endif %}
+          
+          {% if is_bestseller %}
           <div class="question">
             <p>Is Best-Seller?</p>
             <div class="question-answer">
-              <input type="radio" value="1" id="radio_3" name="isbestseller"/>
+              <input type="radio" value="1" id="radio_3" name="isbestseller" checked/>
               <label for="radio_3" class="radio"><span>Yes</span></label>
               <input type="radio" value="0" id="radio_4" name="isbestseller" />
               <label for="radio_4" class="radio"><span>No</span></label>
             </div>
           </div>
+          {% else %}
+          <div class="question">
+            <p>Is Best-Seller?</p>
+            <div class="question-answer">
+              <input type="radio" value="1" id="radio_3" name="isbestseller"/>
+              <label for="radio_3" class="radio"><span>Yes</span></label>
+              <input type="radio" value="0" id="radio_4" name="isbestseller" checked/>
+              <label for="radio_4" class="radio"><span>No</span></label>
+            </div>
+          </div>
+          {% endif %}
+          {% if is_available %}
           <div class="question"> 
             <p>Is Available?</p>
             <div class="question-answer">
-              <input type="radio" value="1" id="Yes" name="isavailable"/>
+              <input type="radio" value="1" id="Yes" name="isavailable" checked/>
               <label for="Yes" class="radio"><span>Yes</span></label>
               <input type="radio" value="0" id="No" name="isavailable" />
               <label for="No" class="radio"><span>No</span></label>
             </div>
           </div>
-          
+          {% else %}
+          <div class="question"> 
+            <p>Is Available?</p>
+            <div class="question-answer">
+              <input type="radio" value="1" id="Yes" name="isavailable"/>
+              <label for="Yes" class="radio"><span>Yes</span></label>
+              <input type="radio" value="0" id="No" name="isavailable" checked/>
+              <label for="No" class="radio"><span>No</span></label>
+            </div>
+          </div>
+          {% endif %}
           <div class="item">
             <p>Price</p>
             <input  type="number" step="1.0" name="price" placeholder="{{ Price }}"/>
