@@ -1,6 +1,6 @@
 body{
     font-family: 'Edu TAS Beginner',cursive;
-    background-image: url("/imgs/card_page-bg.jpg");
+    background-image: url("../imgs/card_page-bg.jpg");
     margin: 0;
 }
 .navbar .navbar-nav .nav-link {
