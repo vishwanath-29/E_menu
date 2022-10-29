@@ -1,4 +1,6 @@
 {% load static %}
+<!-- TODO ADD UNAVAILBLE DISHES EDITING OPTION -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,8 +40,8 @@
                                 <div class="btn-group">
                                     <form action="/edit/" method="post">
                                         {% with Foodid=i|get_item:'id' %}
-                                        <input type="hidden" name="FoodId" value={{Foodid}} />        
-                                        <button class="btn btn-primary btn-gap">Edit</button>
+                                        <input type="hidden" name="FoodId" value="{{Foodid}}" />        
+                                        <button class="btn btn-primary btn-gap" name="goto_edit">Edit</button>
                                     </form>
                                     {% endwith %}
                                 </div>

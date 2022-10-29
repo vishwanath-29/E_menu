@@ -1,4 +1,6 @@
 {% load static %}
+<!-- TODO ADD EDITED DELETED RESPONSE WHEN DONE-->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,13 +21,13 @@
           <div class="item">
             <p>Name</p>
             <div class="name-item input-area">
-              <input type="text" name="FoodName" placeholder="{{ Food_Name }}" />
+              <input type="text" name="FoodName" value="{{ Food_Name }}" />
             </div>
           </div>
           <div class="item">
               <p>Short Description</p>
               <div class="input-area">
-                <input type="text" name="ShortDescription" placeholder="{{ Short_Description }}">
+                <input type="text" name="ShortDescription" value="{{ Short_Description }}">
               </div>
             </div>
             {% if is_veg %}
@@ -94,7 +96,7 @@
           {% endif %}
           <div class="item">
             <p>Price</p>
-            <input  type="number" step="1.0" name="price" placeholder="{{ Price }}"/>
+            <input  type="number" step="1.0" name="price" value="{{ Price }}"/>
           </div>
           <div class="item">
             <p>Category </p>
@@ -108,16 +110,24 @@
               <option value="Desserts">Desserts</option>
             </select>
             </div>
+            <div class="item">
+              <p>Food URL</p>
+              <div class="name-item input-area">
+                <input type="hidden" name="FoodId" value="{{ id }}" />  
+                <input type="text" name="food_link" value="{{ image_link }}" />
+              </div>
+            </div>
           </div>
               
       
         
       </div>
       <div class="btn-block">
-        <button type="submit" style="margin-right: 20px;" name="Get">Get</button>
         <button type="submit" style="margin-right: 20px;" name="Save">Save</button>
+        <button type="submit" style="margin-right: 20px;" name="Delete">Delete</button>
       </div>
     </div>
   </form>
       </body>
 </html>
+
