@@ -16,22 +16,22 @@
 </head>
 
 <body>
-
     <h2 >OUR SPECALITIY</h2>
-        <!-- <div class="speciality" id="speciality">
-            <div class="col d-flex justify-content-center">-->
-                
-                <div class="card-columns  "> 
-            <div class="row"> 
-                {% for i in food_details %}
+        <div class="speciality" id="speciality">
+            <div class="col d-flex justify-content-center">
+            <div class="card-columns  ">
+
+                <div class="row">
+                    {% for i in food_details %}
+                    {% if i|get_item:"is_available"  %}
                     <div class="card card-gap col-4">
-                        <img class="card-img-top" src="{% static 'imgs/food.jpg' %}" alt="Card image cap" id="myimg" >
+                        {{ i|get_item:"image_link"}}
+                        {% if i|get_item:"is_bestseller"  %}
                         <span class="badge " id="bg1">Bestseller</span>
+                        {% endif %}
                         <div class="card-body">
-                            <h5 class="card-title" id="hea1">{{ i|get_item:"Food_Name" }}</h5><span class="badge bg-secondary" id="bd1">$15</span>
-                            <p class="card-text"  id="tex" >Some quick example text to build on the card title and make up the bulk of the
-                                card's
-                                content.</p>
+                            <h5 class="card-title" id="hea1">{{ i|get_item:"Food_Name" }}</h5><span class="badge bg-secondary" id="bd1">₹{{ i|get_item:"Price" }}</span>
+                            <p class="card-text"  id="tex" >{{ i|get_item:"Short_Description" }}</p>
                                 <div class="btn-group">
                                     <button onclick="edit()" class="btn btn-primary btn-gap">Edit</button>
                                     <button class="btn btn-primary btn-gap">Save</button>
@@ -39,87 +39,13 @@
                             
                         </div>
                     </div>
-            </div>
-            </div>
+                    {% endif %}
                     {% endfor %}
-                    <!-- <div class="card card-gap col-4">
-                        <img class="card-img-top" src="{% static 'imgs/food.jpg' %}" id="myimg1"  alt="Card image cap">
-                        <span class="badge " class="badge1" id="bg2">Bestseller</span>
-                        <div class="card-body">
-                            <h5 class="card-title" id="hea2">Burger</h5><span class="badge bg-secondary" id="bd2">$15</span>
-                            <p class="card-text" id="tex1">Some quick example text to build on the card title and make up the bulk of the
-                                card's
-                                content.</p>
-                            <div class="btn-group">
-                                <button onclick="edit1()" class="btn btn-primary btn-gap">Edit</button>
-                                <button class="btn btn-primary btn-gap">Save</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-gap col-4">
-                        <img class="card-img-top" id="myimg2" src="{% static 'imgs/food.jpg' %}"  alt="Card image cap">
-                        <span class="badge " class="badge1" id="bg3">Bestseller</span>
-                        <div class="card-body">
-                            <h5 class="card-title" id="hea3">Dessert</h5> <span class="badge bg-secondary" id="bd3">$15</span>
-                            <p class="card-text" id="tex2">Some quick example text to build on the card title and make up the bulk of the
-                                card's
-                                content.</p>
-                            <div class="btn-group">
-                                <button onclick="edit2()" class="btn btn-primary btn-gap">edit</button>
-                                <button class="btn btn-primary btn-gap">Save</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-            <div class="row">
-                <div class="card card-gap col-4">
-                    <img class="card-img-top" id="myimg3" src="{% static 'imgs/food.jpg' %}" alt="Card image cap">
-                    <span class="badge " class="badge1" id="bg4">Bestseller</span>
-                    <div class="card-body">
-                        <h5 class="card-title" id="hea4">Chinese</h5><span class="badge bg-secondary" id="bd4">$15</span>
-                        <p class="card-text" id="tex3">Some quick example text to build on the card title and make up the bulk of the
-                            card's
-                            content.</p>
-                        <div class="btn-group">
-                            <button onclick="edit3()" class="btn btn-primary">Edit</button>
-                            <button class="btn btn-primary">Save</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card card-gap col-4">
-                    <img class="card-img-top" id="myimg4" src="{% static 'imgs/food.jpg' %}"alt="Card image cap">
-                    <span class="badge " class="badge1" id="bg5">Bestseller</span>
-                    <div class="card-body">
-                        <h5 class="card-title" id="hea5">Italian</h5><span class="badge bg-secondary" id="bd5">$15</span>
-                        <p class="card-text" id="tex4">Some quick example text to build on the card title and make up the bulk of the
-                            card's
-                            content.</p>
-                        <div class="btn-group">
-                            <button onclick="edit4()" class="btn btn-primary">Edit</button>
-                            <button class="btn btn-primary">Save</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card card-gap col-4">
-                    <img class="card-img-top" id="myimg5" src="{% static 'imgs/food.jpg' %}"  alt="Card image cap">
-                    <span class="badge " class="badge1" id="bg6">Bestseller</span>
-                    <div class="card-body">
-                        <h5 class="card-title" id="hea6">Indian</h5><span class="badge bg-secondary" id="bd6">$15</span>
-                        <p class="card-text" id="tex5">Some quick example text to build on the card title and make up the bulk of the
-                            card's
-                            content.</p>
-                        <div class="btn-group">
-                            <button onclick="edit5()" class="btn btn-primary">Edit</button>
-                            <button class="btn btn-primary">Save</button>
-                        </div>
-                    </div>
-                </div>
-                </div>
             </div>
-            </div> -->
-        <!-- </div>
-        </section> -->
+            </div>
+            </div>
+        </div>
+        </section>
 
     <script src="{% static 'js/car_page.js' %}"></script>
 </body>

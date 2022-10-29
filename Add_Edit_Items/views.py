@@ -20,13 +20,14 @@ def add(request):
         food_isvegetarian=request.POST['isavailable']
         food_price=request.POST['price']
         food_category=request.POST['category']
-       
+        food_image_link=request.POST['food_link']
         food=Food(Restaurant_ID=user,Food_Name=food_name,Short_Description=food_description,
         is_veg=food_isvegetarian,
         is_bestseller=food_isbestseller,
         is_available=food_isavailable,
         Price=food_price,
         Category=food_category,
+        image_link=food_image_link
         )
         food.save()
     return render(request,"add_edit/add.html")
