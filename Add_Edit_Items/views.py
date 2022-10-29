@@ -1,4 +1,5 @@
 import email
+import re
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
@@ -13,11 +14,16 @@ def add(request):
     user = request.user
     print(user)
     if(request.method=="POST"):
+        
         food_name=request.POST['FoodName']
         food_description=request.POST['ShortDescription']
-        food_isavailable=request.POST['isvegetarian']
-        food_isbestseller=request.POST['isbestseller']
-        food_isvegetarian=request.POST['isavailable']
+        
+        food_isavailable=request.POST.get('isavailable')
+        food_isbestseller=request.POST.get('isbestseller')
+        food_isvegetarian=request.POST.get('isvegetarian')
+        print("Food Vegetrain "+food_isvegetarian)
+        print("Food Best Seller "+food_isbestseller)
+        print("Food Available "+food_isavailable)
         food_price=request.POST['price']
         food_category=request.POST['category']
         food_image_link=request.POST['food_link']
@@ -29,7 +35,7 @@ def add(request):
         Category=food_category,
         image_link=food_image_link
         )
-        food.save()
+        #food.save()
     return render(request,"add_edit/add.html")
 
 
