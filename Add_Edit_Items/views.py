@@ -36,11 +36,12 @@ def add(request):
 def edit(request):
     all_data = list(Food.objects.all().values())
     print(all_data)
-    if 'Get' in request.POST:
-        get_food_name=request.POST['FoodName']
-        food_data = Food.objects.filter(Food_Name=get_food_name).values()
+    if request.method=="POST":
+        print(request)
+        get_food_id=request.POST['FoodId']
+        print(get_food_id)
+        food_data = Food.objects.filter(id=get_food_id).values()
         context=food_data.values().first()
-        print(context)
         return render(request,"add_edit/edit.html",context)
     
     return render(request,"add_edit/card_page.html",{"food_details":all_data})   

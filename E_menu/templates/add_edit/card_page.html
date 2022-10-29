@@ -24,18 +24,24 @@
                 <div class="row">
                     {% for i in food_details %}
                     {% if i|get_item:"is_available"  %}
+                    
                     <div class="card card-gap col-4">
                         <div class="card-img-top"> {% autoescape off %}{{ i|get_item:"image_link"}}{% endautoescape %}
                         </div>
                         {% if i|get_item:"is_bestseller"  %}
                         <span class="badge " id="bg1">Bestseller</span>
                         {% endif %}
+                     
                         <div class="card-body">
                             <h5 class="card-title" id="hea1">{{ i|get_item:"Food_Name" }}</h5><span class="badge bg-secondary" id="bd1">₹{{ i|get_item:"Price" }}</span>
                             <p class="card-text"  id="tex" >{{ i|get_item:"Short_Description" }}</p>
                                 <div class="btn-group">
-                                    <button onclick="edit()" class="btn btn-primary btn-gap">Edit</button>
-                                    <button class="btn btn-primary btn-gap">Save</button>
+                                    <form action="/edit/" method="post">
+                                        {% with Foodid=i|get_item:'id' %}
+                                        <input type="hidden" name="FoodId" value={{Foodid}} />        
+                                        <button class="btn btn-primary btn-gap">Edit</button>
+                                    </form>
+                                    {% endwith %}
                                 </div>
                             
                         </div>
