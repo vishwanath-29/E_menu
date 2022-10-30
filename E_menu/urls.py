@@ -22,5 +22,6 @@ urlpatterns = [
     path('',include('accounts.urls')),
     path('',include('home.urls')),
     path('',include('Add_Edit_Items.urls')),
-    path('',include('restaurant.urls'))
+    path('',include('restaurant.urls')),
+    path('',include('view_menu.urls'))
 ]

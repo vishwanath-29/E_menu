@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'home',
     'Add_Edit_Items',
     'restaurant',
+    'view_menu'
 ]
 
 MIDDLEWARE = [
