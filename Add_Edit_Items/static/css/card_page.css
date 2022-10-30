@@ -39,12 +39,29 @@ h2{
 }
 @keyframes glowing {
     0% {
+        background-color: #1b0505;
+        box-shadow: 0 0 3px #4427a0;
+    }
+
+    50% {
+        background-color: #7c6c6c;
+        box-shadow: 0 0 10px #100b20;
+    }
+
+    100% {
+        background-color: #100b20;
+        box-shadow: 0 0 3px #100b20;
+    }
+}
+
+@keyframes small-badge-glowing {
+    0% {
         background-color: #100b20;
         box-shadow: 0 0 3px #4427a0;
     }
 
     50% {
-        background-color: #100b20;
+        background-color: #e42828;
         box-shadow: 0 0 10px #100b20;
     }
 
@@ -55,6 +72,23 @@ h2{
 }
 .badge{
     animation: glowing 1300ms infinite;
+}
+
+.icons{
+    height: 30px;
+    width: 30px;
+}
+
+.unavailable{
+    width: 6rem;
+    height: 1.6rem;
+    background-color: #FFACB7;
+    animation: small-badge-glowing 1300ms infinite;
+}
+
+
+.food_name{
+    font-size: 1.5rem;
 }
 
 .card-gap{

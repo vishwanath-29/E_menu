@@ -57,6 +57,16 @@ h2{
     animation: glowing 1300ms infinite;
 }
 
+.icons{
+    height: 30px;
+    width: 30px;
+}
+
+
+.food_name{
+    font-size: 1.5rem;
+}
+
 .card-gap{
     margin: 2rem;
     padding: 2rem;

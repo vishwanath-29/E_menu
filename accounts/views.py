@@ -44,7 +44,7 @@ def register(request):
                 restaurant_obj=restaurant(Restaurant_Id=user,Restaurant_name=restaurant_name)
                 restaurant_obj.save()
                 print("User saved")
-                return redirect('/restaurant')
+                return redirect('/login')
                 
         else:
             messages.error(request,'Password Not Matching...')
