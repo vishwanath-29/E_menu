@@ -35,7 +35,7 @@ def add(request):
         Category=food_category,
         image_link=food_image_link
         )
-        #food.save()
+        food.save()
     return render(request,"add_edit/add.html")
 
 
