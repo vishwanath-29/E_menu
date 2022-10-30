@@ -40,8 +40,7 @@
                                 <div class="btn-group">
                                     <form action="/edit/" method="post">
                                         {% with Foodid=i|get_item:'id' %}
-                                        <input type="hidden" name="FoodId" value="{{Foodid}}" />        
-                                        <button class="btn btn-primary btn-gap" name="goto_edit">Edit</button>
+                                        <input type="hidden" name="FoodId" value="{{Foodid}}" />       
                                     </form>
                                     {% endwith %}
                                 </div>

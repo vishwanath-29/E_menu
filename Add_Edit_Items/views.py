@@ -40,7 +40,8 @@ def add(request):
 
 
 def edit(request):
-    all_data = list(Food.objects.all().values())
+    user = request.user
+    all_data = list(Food.objects.filter(Restaurant_ID_id=user).values())
     print(all_data)
     if request.method=="POST":
         if "goto_edit" in request.POST:
