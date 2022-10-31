@@ -75,9 +75,8 @@ def edit(request):
             food.is_available=food_isavailable
             food.Price=food_price
             food.image_link=food_image_link
-
             food.save()
-
+            all_data = list(Food.objects.filter(Restaurant_ID_id=user).values())
             return render(request,"add_edit/card_page.html",{"food_details":all_data})   
         elif "Delete" in request.POST:
             get_food_id=request.POST['FoodId']
