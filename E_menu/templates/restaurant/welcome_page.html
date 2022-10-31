@@ -1,4 +1,4 @@
-{% load static %}
+<!-- {% load static %}
 <!-- TODO RESTRICT THE DISPLAY OF THIS PAGE -->
 
 <!DOCTYPE html>
@@ -6,6 +6,10 @@
 
 <head>
 
+    {% with i=response|get_value:1%}
+    {% with rest_details=i|get_item:'Restname'%}
+    {% with rest=rest_details|get_value:0%}
+    {% with rest_name=rest|get_item:'Restaurant_name'%}
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +18,7 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
 
     <!-- Site Metas -->
-    <title>Food Funday Restaurant - One page HTML Responsive</title>
+    <title>{{rest_name}}</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -39,10 +43,17 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    {% endwith %}
+    {% endwith %}
+    {% endwith %}
+    {% endwith %}
 </head>
 
 <body>
+    {% with i=response|get_value:1%}
+    {% with rest_details=i|get_item:'Restname'%}
+    {% with rest=rest_details|get_value:0%}
+    {% with rest_name=rest|get_item:'Restaurant_name'%}
     <div id="loader">
         <div id="status"></div>
     </div>
@@ -96,10 +107,12 @@
                 <div class="banner-static">
                     <div class="banner-text">
                         <div class="banner-cell">
-                            
-                            <h1>Hello  <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="{{ Userdetails }}" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
-                            <h2>This is Restaurant 1</h2>
-                         
+                            {% with i=response|get_value:0%}
+                            {% with user=i|get_item:'Userdetails'%}                        
+                            <h1>Hello  <span class="typer" id="some-id" data-delay="200" data-delim=":" style="text-transform: capitalize" data-words="{{ user }}" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
+                            <h2>This is {{ rest_name}}</h2>
+                            {% endwith %}
+                            {% endwith %}
                            <div class="row">
                             <div class="btns">
                                 <div class="add-btn col-lg-6">
@@ -151,6 +164,10 @@
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- ALL PLUGINS -->
     <script src="{% static 'js/custom.js' %}"></script>
+    {% endwith %}
+    {% endwith %}
+    {% endwith %}
+    {% endwith %}
 </body>
 
-</html>
+</html> -->

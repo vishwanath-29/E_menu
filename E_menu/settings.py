@@ -78,24 +78,24 @@ WSGI_APPLICATION = 'E_menu.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'restaurant_management',
-#         'USER':'vishwa',
-#         'PASSWORD':'1234',
-#         'HOST':'localhost'
-#     }
-# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'yrqicjje',
-        'USER':'yrqicjje',
-        'PASSWORD':'2H56PHHibpnBUaDmH9l0bL1ltc7uDWiq',
-        'HOST':'rosie.db.elephantsql.com'
+        'NAME': 'restaurant_management',
+        'USER':'vishwa',
+        'PASSWORD':'1234',
+        'HOST':'localhost'
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'yrqicjje',
+#         'USER':'yrqicjje',
+#         'PASSWORD':'2H56PHHibpnBUaDmH9l0bL1ltc7uDWiq',
+#         'HOST':'rosie.db.elephantsql.com'
+#     }
+# }
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',

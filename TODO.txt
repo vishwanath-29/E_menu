@@ -11,3 +11,8 @@ DONE:
 3)TODO RETURN TO MENU CARD AFTER EDITING (DONE)
 4)TODO REGISTER DONE GOTO LOGIN PAGE (DONE)
 5)TODO REMOVE CATEGORY FROM FOOD   (DONE)
+<h1> {{rest}} </h1>
+{% with restdetails=i|get_item:'Restname' %}
+    <h1> {{restdetails}} </h1>
+   
+    {% endwith %}
