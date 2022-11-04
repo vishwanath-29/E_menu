@@ -1,4 +1,4 @@
-<!-- {% load static %}
+{% load static %}
 <!-- TODO RESTRICT THE DISPLAY OF THIS PAGE -->
 
 <!DOCTYPE html>
@@ -50,10 +50,10 @@
 </head>
 
 <body>
-    {% with i=response|get_value:1%}
-    {% with rest_details=i|get_item:'Restname'%}
-    {% with rest=rest_details|get_value:0%}
-    {% with rest_name=rest|get_item:'Restaurant_name'%}
+    {% with i=response|get_value:1 %}
+    {% with rest_details=i|get_item:'Restname' %}
+    {% with rest=rest_details|get_value:0 %}
+    {% with rest_name=rest|get_item:'Restaurant_name' %}
     <div id="loader">
         <div id="status"></div>
     </div>
@@ -79,13 +79,11 @@
                             </div>
                             <div id="navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li class="active"><a href="#banner">Home</a></li>
+                                    <!-- <li class="active"><a href="home">Home</a></li> -->
                                     <!-- <li><a href="#">About us</a></li> -->
                                    
                                     <li><a href="logout">Logout</a></li>
-                                   
-                                    
-                                    <li><a href="#">Contact us</a></li>
+
                                 </ul>
                             </div>
                             <!-- end nav-collapse -->
@@ -110,7 +108,8 @@
                             {% with i=response|get_value:0%}
                             {% with user=i|get_item:'Userdetails'%}                        
                             <h1>Hello  <span class="typer" id="some-id" data-delay="200" data-delim=":" style="text-transform: capitalize" data-words="{{ user }}" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
-                            <h2>This is {{ rest_name}}</h2>
+                            <!-- <h2 class="rest_name">This is {{ rest_name}}</h2> -->
+                            <br>
                             {% endwith %}
                             {% endwith %}
                            <div class="row">

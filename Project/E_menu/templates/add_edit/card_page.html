@@ -13,12 +13,16 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Work+Sans:wght@300&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="{% static 'css/card_page.css' %}"> 
 
 </head>
 
 <body>
-    <h2 >MENU CARD</h2>
+    <div class="heading">
+        <h2>MENU CARD</h2>
+    </div>
+    
         <div class="speciality" id="speciality">
             <div class="col d-flex justify-content-center">
             <div class="card-columns  ">
@@ -27,7 +31,7 @@
                     {% for i in food_details %}
                     
                     <div class="card card-gap col-4">
-                        <div class="card-img-top"> {% autoescape off %}{{ i|get_item:"image_link"}}{% endautoescape %}
+                        <div class="card-img-top card-image"> {% autoescape off %}{{ i|get_item:"image_link"}}{% endautoescape %}
                         </div>
                         {% if i|get_item:"is_bestseller"  %}
                         <span class="badge " id="bg1">Bestseller</span>

@@ -94,7 +94,7 @@ h6 {
     padding: 0 0 10px 0;
     font-weight: normal;
     line-height: 120% !important;
-    color: #b3aeae;
+    color: white;
     margin: 0
 }
 
@@ -103,7 +103,8 @@ h1 {
 }
 
 h2 {
-    font-size: 22px
+    font-size: 22px;
+    color: white;
 }
 
 h3 {
@@ -270,6 +271,14 @@ html, body{ height: 100%; }
     width: 100%;
     top: 0;
     left: 0;
+}
+
+.rest_name{
+    color: white;
+}
+
+h2{
+    color: white;
 }
 
 .main-menu{}

@@ -31,11 +31,19 @@ body{
     font-size: 55%;
   }
 }
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    
+}
+
 h2{
     font-family: fantasy;
     font: 200;
     color: chocolate;
-    padding-left: 630px;
+    
 }
 @keyframes glowing {
     0% {
@@ -77,6 +85,22 @@ h2{
 .icons{
     height: 30px;
     width: 30px;
+}
+
+.card-image{
+    height: 150px;
+    width: 150px;
+}
+
+img{
+    width: 320px;
+    height: 280px;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
 }
 
 .unavailable{
