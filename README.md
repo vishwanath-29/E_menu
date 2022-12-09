@@ -17,7 +17,7 @@ You could see the Home Page of the Site
 
 
 People who involved in the Development of this Project:
-    1)Vishwanath N
-    2)Vishal GK
-    3)Karthickeyan M
+1. Vishwanath N
+2. Vishal GK
+3. Karthickeyan M
 
