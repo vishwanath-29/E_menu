@@ -10,7 +10,8 @@ Installation:
 2. Run the Command "python manage.py runserver"
 
 Usage Instructions:
-After running the command,go to link provided on the terminal.
+
+1. After running the command,go to link provided on the terminal.
 You could see the Home Page of the Site
 
 
